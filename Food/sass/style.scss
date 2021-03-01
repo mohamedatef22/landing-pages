@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+.nav-bar {
+    font-size: 2rem;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 1rem 5%;
+    display: flex;
+    align-items: center;
+    
+    &__logo {
+        font-family: 'Kaushan Script', cursive;
+        font-size: 3rem;
+    }
+
+    &__list{
+        display: flex;
+        list-style: none;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-family: 'Akaya Kanadaka', cursive;
+        margin-left: auto;
+        &__items{
+            margin: 0 2rem;
+            padding: 1rem;
+            transition: all .6s;
+            &:hover {
+                color: #f1c40f;
+                background-color: #7f8c8d;
+            }
+        }
+    }
+}
+.main-section{
+    &__banner{
+        // linear-gradient(to bottom right, #f1c40f70, #001e20)
+        background-image: linear-gradient(to left,#95a5a600, #7f8c8d59),url('../images/banner2.jpg');
+        height: 80vh;
+        width: 100%;
+        background-position: left 20% bottom 30%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__info{
+        font-family: 'Shippori Mincho', serif;
+        color: white;
+        font-size: 2rem;
+        width: 50%;
+        text-align: center;
+        h1{
+            font-size: 5rem;
+            letter-spacing: .5rem;
+            text-transform: uppercase;
+        }
+
+        .btn {
+            display: inline-block;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.btn {
+    text-decoration: none;
+    color: white;
+    padding: 2rem;
+    &-main {
+        background-color: #f39c12;
+    }
+}
+
+
+
+
+
+
+/* utilities */
+.m{
+    &t {
+        @for $i from 1 through 5 {
+            &-#{$i}{
+                margin-top: calc(#{$i} * 1rem);
+            }
+        }
+    }
+    &b {
+        @for $i from 1 through 5 {
+            &-#{$i}{
+                margin-bottom: calc(#{$i} * 1rem);
+            }
+        }
+    }
+}
